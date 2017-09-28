@@ -48,7 +48,7 @@ platform releases.
 
 ### Reflections Q + A
 
-#### Why not set minimum SDK for 2.3 Gingerbread API 10 and run on 99% of devices?
+**Why not set minimum SDK for 2.3 Gingerbread API 10 and run on 99% of devices?**
 
 * **Pro:** Reaching a larger audience.
 
@@ -64,7 +64,7 @@ will be supported and run for a given phone and SDK level.
 
 **Quote From Lesson 2 step 9:**
 
-Here are some examples of hardware support and features, tied to releases.
+> Here are some examples of hardware support and features, tied to releases.
 * Home screen widgets (Cupcake)
 * Multiple finger tracking (Froyo)
 * Tablet (Honeycomb)
@@ -73,8 +73,9 @@ Here are some examples of hardware support and features, tied to releases.
 * Pro Audio (Marshmallow)
 
 
-#### The recommendation is to always set the targetSDK to the latest Android version.
-#### Can you think of any reasons not to do that?
+**The recommendation is to always set the targetSDK to the latest Android version.**
+
+**Can you think of any reasons not to do that?**
 
 * Yes. If you have an existing app and upgrading to the new version would break
 existing code. Fixing the code may take substantial time and effort so it would
@@ -85,8 +86,9 @@ Marshmallow. Getting up to speed on the new model and fixing the code will
 take time so keep pointing to Lollipop until the code is fixed and tested.
 
 
-#### Where can you set the App Version Name and Code? Why can't you safely downgrade
-#### to an old App version?
+**Where can you set the App Version Name and Code? Why can't you safely downgrade**
+
+** to an old App version?**
 
 * The app version name and code can be set in the Project Structure Dialog in
 Android Studio. The app store won't accept older app versions than what they already
