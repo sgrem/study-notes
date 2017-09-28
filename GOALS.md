@@ -21,3 +21,6 @@
 	**Git** lesson 3
 ### 9/24/17
 	**Git** lesson 4
+### 9/26/17
+	**Dev** lesson 1
+

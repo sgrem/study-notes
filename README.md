@@ -6,13 +6,15 @@
 			this file
 		### GOALS.md file
 			SMART weekly goals (specific, measurable, achievable, relevant, time bounded)
+			Goal completion log
 	
-	## class"ReplaceWithTitleOfClass" branch:
+	## "replaceWithTitleOfClass" branch:
 		branch for each class
 	
 		### LESSON##.md file: notes file for each lesson in the class
-			1. Reflections Q + A
-			1. SMART Goals
+			More Research
+			Notes
+			Reflections Q + A
 
 # To make changes to this README.md file or GOALS.md file
 	1. checkout master
