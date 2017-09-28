@@ -74,7 +74,6 @@ will be supported and run for a given phone and SDK level.
 
 
 **The recommendation is to always set the targetSDK to the latest Android version.**
-
 **Can you think of any reasons not to do that?**
 
 * Yes. If you have an existing app and upgrading to the new version would break
@@ -87,8 +86,7 @@ take time so keep pointing to Lollipop until the code is fixed and tested.
 
 
 **Where can you set the App Version Name and Code? Why can't you safely downgrade**
-
-** to an old App version?**
+**to an old App version?**
 
 * The app version name and code can be set in the Project Structure Dialog in
 Android Studio. The app store won't accept older app versions than what they already
