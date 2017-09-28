@@ -93,10 +93,10 @@ Android Studio. The app store won't accept older app versions than what they alr
 have.
 
 
-#### For Android 8.0 SDK what is the difference between the Google API system
-image and the Google Play system image?
+**For Android 8.0 SDK what is the difference between the Google API system
+image and the Google Play system image?**
 
-* [Stack Overflow answer:](https://stackoverflow.com/questions/45664516/difference-between-google-api-intel-x86-atom-and-google-play-intel-x86-atom-syte)
+* [Stack Overflow answer](https://stackoverflow.com/questions/45664516/difference-between-google-api-intel-x86-atom-and-google-play-intel-x86-atom-syte)
 
 * To paraphrase Stack Overflow answer:
 > Google Play will run the play store and allow download/install
