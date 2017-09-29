@@ -44,7 +44,70 @@
 * Android 1 launched in 2008. In the 9 years since then there have been 14 new major
 platform releases.
 
+* Exercise: Framing Favorite Toys
+	Checkout T01.01-Exercise-CreateLayout branch
+	
+	Import ud851-Exercises project
+	
+		Sync fails, Messages suggests to install Build Tools 25.0.2
+		
+			Project Structure is missing the app module and other entries.
+			
+			Installed Build Tools 25.0.2 and synced.
+			
+			Now Project Structure looks good.
+			
+		Failed to resolve constraint-layout in app/build.gradle so I deleted the
+		
+		corresponding compile entry.
+		
+		Updated to Android Gradle plugin 3.0.0-beta6 and Gradle to 4.1
+		
+			Project build.gradle classpath 'com.android.tools.build:gradle:3.0.0-beta6'
+			
+			gradle-wrapper.properties distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-all.zip
+			
+			This was needed because I'm running Android Studio 3.0 Beta 6
+		
+		Sync fails: unable to clean C:/tmp/ud851-Exercises
+		
+			I created D:/tmp and made corresponding change in project build.gradle file 
+			
+			Synced ok
+			
+			NOTE: activity_main.xml Design tab wouldn't work until project build was successful.
+			
+		Closed project
+		
+		Using git for windows bash shell to run git
+		
+			Added .gitignore file.
+			
+			`git reset HEAD` on a bunch of .idea/libraries/*.xml that I had inadvertantly added to git.
+			
+			Opened project back up and ran on AVD Nexus 5x API 26 and ran ok.
+		
+		Closed project, committed, and pushed to github.
 
+* Exercise: Toying with Favorite Toys
+	`git checkout T01.02-Exercise-DisplayToyList` and copied in .gitignore from another Android Studio project
+	
+	Import ud851-Exercises project
+	
+		To take advantage of Instant Run, improvements, and security fixes:
+
+			updated Android Gradle plugin to 3.0.0-beta6 and Gradle to 4.1
+			
+		Used a StringBuilder in a foreach loop to build the list of toy names
+		
+		Ran successfully. Closed project, committed, and pushed to github.
+		
+* Exercise: See More Favorite Toys
+	`git checkout T01.03-Exercise-AddScrolling` and copied in .gitignore from another Android Studio project
+		
+		They used a TextView append convenience function rather than StringBuilder.
+		
+		Completed TODOs, ran ok, closed, committed, and pushed.
 
 ### Reflections Q + A
 
