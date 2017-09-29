@@ -13,11 +13,12 @@
 ### Notes
 
 * Created FavoriteToys project
+
 	Used minimum SDK 5.1 Lollipop (API 22)
 	
 		Covers 69% of devices
 		
-		[Dashboard](https://developer.android.com/about/dashboards/index.html)
+	[Dashboard](https://developer.android.com/about/dashboards/index.html)
 		
 	Used Empty Activity Template
 	
@@ -45,6 +46,7 @@
 platform releases.
 
 * Exercise: Framing Favorite Toys
+
 	Checkout T01.01-Exercise-CreateLayout branch
 	
 	Import ud851-Exercises project
@@ -90,6 +92,7 @@ platform releases.
 		Closed project, committed, and pushed to github.
 
 * Exercise: Toying with Favorite Toys
+
 	`git checkout T01.02-Exercise-DisplayToyList` and copied in .gitignore from another Android Studio project
 	
 	Import ud851-Exercises project
@@ -103,6 +106,7 @@ platform releases.
 		Ran successfully. Closed project, committed, and pushed to github.
 		
 * Exercise: See More Favorite Toys
+
 	`git checkout T01.03-Exercise-AddScrolling` and copied in .gitignore from another Android Studio project
 		
 		They used a TextView append convenience function rather than StringBuilder.

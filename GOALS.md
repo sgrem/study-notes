@@ -27,5 +27,9 @@ Complete lessons 1+2+3+4 of **Dev**
 
 ### 9/28/17 - 10/4/17
 Complete lessons 2+3+4 of **Dev**
+
+### 10/5/17 - 10/11/17
+Complete lesson 5 or **Dev**
+
 Complete lesson 1 and the Entry-Level Resume Project of **Job**
 
