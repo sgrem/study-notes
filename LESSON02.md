@@ -7,6 +7,9 @@
 * Differences between Android versions
 * Project Structure Dialog in Android Studio
 * Runing adb
+* Constraint Layout
+* Responsive Design
+* Support Library
 
 
 
@@ -109,9 +112,60 @@ platform releases.
 
 	`git checkout T01.03-Exercise-AddScrolling` and copied in .gitignore from another Android Studio project
 		
-		They used a TextView append convenience function rather than StringBuilder.
+	They used a TextView append convenience function rather than StringBuilder.
 		
-		Completed TODOs, ran ok, closed, committed, and pushed.
+	Completed TODOs, ran ok, closed, committed, and pushed.
+
+* LayoutPlayspace project to play with Constraint Layout
+
+	Created new project and added to git.
+	
+		Under Version Control tab, to add files right click Untracked changelist and select `add to git`
+		
+	Constraint Layout is distributed as a support library that is tightly coupled with Android Studio and backwards compatible to API Level 9.
+	
+	Used graphic editing tab to edit android.support.constraint.ConstraintLayout layout
+	
+		Deleted the Hello World TextView.
+		
+		Dragged and dropped a DatePicker widget and used the constraint view to add top, left, right, and bottom size constraints.
+		
+	Ran ok in Nexus 5x API 26 emulator. Committed and closed.
+	
+* Exercise: Update Sunshine Layout
+
+	Import ud851-Sunshine/S01.01-Exercise-CreateLayout
+	
+		NOTE: I'm staying on student branch which has directories for each Exercise/Solution project.
+	
+	updated Android Gradle plugin to 3.0.0-beta6 and Gradle to 4.1
+	
+	Completed TODOs to generate a blank screen.
+	
+	Ran ok in Nexus 5x API 26 emulator. Committed and closed.
+	
+* Exercise: Add Scrolling Weather
+
+	`git checkout student`
+
+	Open ud851-Sunshine/S01.02-Exercise-AddWeatherList as an existing Android Studio
+	project
+	
+	updated Android Gradle plugin to 3.0.0-beta6 and Gradle to 4.1
+	
+	Completed TODOs to display a list of weather data.
+	
+	Ran ok in Nexus 5x API 26 emulator. 
+	
+	Ran git in bash shell. Added changed files, committed and closed.
+	
+		The .git repository is in the ud851-Sunshine directory. When I open a
+		subdirectory such as ud851-Sunshine/S01.02-Exercise-AddWeatherList
+		as an Anddroid Studio project it doesn't see .git. However, all the
+		changes to that directory are still tracked in the main directory so
+		I use git bash shell to add and commit the changes.
+
+
 
 ### Reflections Q + A
 
@@ -139,6 +193,9 @@ will be supported and run for a given phone and SDK level.
 * Android TV, Auto, Wear (Lollipop)
 * Pro Audio (Marshmallow)
 
+**Quote from Create New Project dialog in Android Studio**
+
+> Low API levels target more devices, but offer fewer API features.
 
 **The recommendation is to always set the targetSDK to the latest Android version.**
 **Can you think of any reasons not to do that?**
@@ -168,4 +225,12 @@ image and the Google Play system image?**
 * To paraphrase Stack Overflow answer:
 > Google Play will run the play store and allow download/install
 apps but doesn't allow root access for debugging.
+
+**When would you use a Constraint Layout rather than a relative layout or linear layout?
+
+* Constraint layout avoids an extra cycle of measure/layout that caused performance issues with Relative Layouts. 
+
+* Nesting linear layouts can also be performance intensive whereas the constraint layout creates equivalent layouts without nesting. 
+
+* 
  
