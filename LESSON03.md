@@ -7,6 +7,9 @@
 * Android Gradle plugin API and targets
 * aapt
 * Android Studio Gradle and Gradle Console tabs
+* [app namespace](https://stackoverflow.com/questions/36044383/whats-the-use-of-app-namespace-in-android-xml)
+* [Menu Resource](https://developer.android.com/guide/topics/resources/menu-resource.html)
+* [Menu API Guide](https://developer.android.com/guide/topics/ui/menus.html)
 
 
 ### Notes
