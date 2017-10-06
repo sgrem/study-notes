@@ -62,8 +62,44 @@
 		
 		Closed and opened project and it was ok.
 		
+	Uri.parse(String uriString): Uri.
 	
+		Static method that parses the given encoded Uri string and creates a Uri.
 
+
+* Opened T02.04-Exercise-ConnectingToTheInternet
+
+	Anything beyond gingerbread will give following exception:
+	
+	com.example.android.datafrominternet E/AndroidRuntime: FATAL EXCEPTION: main
+	
+	Process: com.example.android.datafrominternet, PID: 6245
+	
+	android.os.NetworkOnMainThreadException
+
+
+* Opened T02.05-Exercise-CreateAsyncTask
+
+	Commented out the internet permission from the manisfest.
+	
+		java.lang.RuntimeException: An error occurred while executing doInBackground()
+		
+		Caused by: java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+		
+	Entered empty query ""
+	
+		W/System.err: java.io.FileNotFoundException: https://api.github.com/search/repositories?q=&sort=stars
+
+
+* Opened T02.06-Exercise-AddPolish
+
+	Does the android:id="@+id/id_name" have to be the first xml attribute of a widget? 
+
+
+* Opened S02.01-Exercise-Networking
+
+
+* Opened S01.02-Exercise-Menus
 
 
 ### Reflections Q + A
@@ -80,11 +116,34 @@ having to worry about the particulars of Uri components.
 
 **What are these Uri components and give examples of some of these particulars?**
 
-* [Uri class](https://developer.android.com/reference/android/net/Uri.html)
 
 
-**If you have an Android Uri why do you need a Java URL?**
+
+**What is an Android Uri?**
+
+* [Uri RFC 2396](http://www.faqs.org/rfcs/rfc2396.html)
+
+* [Android Uri class](https://developer.android.com/reference/android/net/Uri.html)
+
+	In the interest of performance, this class performs little to no validation.
+
+	Behavior is undefined for invalid input.
+
+	This class is very forgiving--in the face of invalid input, it will return garbage
+
+	rather than throw an exception unless otherwise specified.
+
+
+**What is a Java URL? Do you need to use both an Android Uri and a Java URL?
+
+* [A Beginners Guide to URLs](http://web.archive.org/web/20051219043731/http://archive.ncsa.uiuc.edu/SDG/Software/Mosaic/Demo/url-primer.html)
+
+* [Java URL class](https://developer.android.com/reference/java/net/URL.html)
+
+
 
 **What are tradeoffs between Uri.Builder vs Uri.parse(URL_STRING).buildUpon()?**
 
 * [Uri builder in Android StackOverflow discussion](https://stackoverflow.com/questions/19167954/use-uri-builder-in-android-or-create-url-with-variables)
+
+**Uri.parse parses a given encoded Uri string. What is an encoded Uri string?**
