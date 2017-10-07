@@ -39,3 +39,5 @@ Complete lesson 3 + 4 of **Dev**
 
 Complete lesson 1 and the Entry-Level Resume Project of **Job**
 
+* 10/6/17 **Dev** lesson 3
+
