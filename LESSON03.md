@@ -157,7 +157,7 @@ having to worry about the particulars of Uri components.
 	rather than throw an exception unless otherwise specified.
 
 
-**What is a Java URL? Do you need to use both an Android Uri and a Java URL?
+**What is a Java URL? Do you need to use both an Android Uri and a Java URL?**
 
 * [A Beginners Guide to URLs](http://web.archive.org/web/20051219043731/http://archive.ncsa.uiuc.edu/SDG/Software/Mosaic/Demo/url-primer.html)
 
