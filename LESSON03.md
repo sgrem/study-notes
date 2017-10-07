@@ -99,7 +99,30 @@
 * Opened S02.01-Exercise-Networking
 
 
-* Opened S01.02-Exercise-Menus
+* Opened S02.02-Exercise-Menus
+
+	If you leave out app:showAsAction="ifroom" it only shows the overflow elipsis on the action bar.
+	
+	I selected the dynamic url in NetworkUtils so I could see the forecast change when I click Refresh.
+
+
+* Opened S02.03-Exercise-Polish
+
+	App crashed
+
+		E/AndroidRuntime: FATAL EXCEPTION: main
+	
+		MainActivity: android.view.InflateException: Binary XML file line #0: ScrollView can host only one direct child
+	
+		Moved ProgressBar and error TextView out of ScrollView and directly into the FrameLayout then it ran ok
+	
+	Refresh Bad
+	
+		background tasks and ability of server to send messages there is no reason to hit refresh.
+		
+		Like a good butler, data should be there before you even know you want it.
+		
+		AsyncTask also bad because we shouldn't couple a background task with a foreground activity.
 
 
 ### Reflections Q + A
