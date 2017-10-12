@@ -24,6 +24,13 @@
 		Closed the project and reopened it and the id resolved ok.
 
 
+* Opened T03.02-Exercise-ViewHolder
+
+	Updated project to target Oreo
+	
+	[Plan for updating an Android project to target new version](AndroidProjectUpgrade.txt)
+
+
 ### Reflections Q + A
 
 **What are the pros and cons of RecyclerView vs ListView?**

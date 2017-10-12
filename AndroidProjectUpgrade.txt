@@ -1,0 +1,92 @@
+<<< Open an existing Android Project
+
+D:\git-repos\ud851-Exercises\Lesson03-Green-Recycler-View\T03.02-Exercise-ViewHolder\app\build.gradle
+
+    Error:Error:line (22)Failed to resolve: com.android.support:appcompat-v7:25.1.0
+<a href="add.google.maven.repository">Add Google Maven repository and sync project</a><br>
+<a href="openFile:D:/git-repos/ud851-Exercises/Lesson03-Green-Recycler-View/T03.02-Exercise-ViewHolder/app/build.gradle">Show in File</a><br>
+<a href="open.dependency.in.project.structure">Show in Project Structure dialog</a>
+
+    Error:Error:line (23)Failed to resolve: com.android.support:recyclerview-v7:25.1.0
+<a href="add.google.maven.repository">Add Google Maven repository and sync project</a><br>
+<a href="openFile:D:/git-repos/ud851-Exercises/Lesson03-Green-Recycler-View/T03.02-Exercise-ViewHolder/app/build.gradle">Show in File</a><br>
+<a href="open.dependency.in.project.structure">Show in Project Structure dialog</a>
+
+<<< Select "Add Google Maven repository and sync project
+
+To take advantage of all the latest features (such as Instant Run), improvements and security fixes, we strongly recommend that you update the Android Gradle plugin to version 3.0.0-beta7 and Gradle to version 4.1.  You can learn more about this version of the plugin from the release notes.
+
+<<< Select "Update"
+
+Gradle Sync Issues
+    Error:Error:The specified Android SDK Build Tools version (25.0.2) is ignored, as it is below the minimum supported version (26.0.2) for Android Gradle Plugin 3.0.0-beta7.
+Android SDK Build Tools 26.0.2 will be used.
+To suppress this warning, remove "buildToolsVersion '25.0.2'" from your build.gradle file, as each version of the Android Gradle Plugin now has a default version of the build tools.
+<a href="fix.build.tools.version">Update Build Tools version and sync project</a><br>
+<a href="openFile:D:/git-repos/ud851-Exercises/Lesson03-Green-Recycler-View/T03.02-Exercise-ViewHolder/app/build.gradle">Open File</a>
+
+<<< Important: The support libraries are now available through Google's Maven repository. 
+<<< You do not need to download the support repository from the SDK Manager. For more information, see Support Library Setup.
+<<< Select "Update Build Tools version and sync project"
+
+Build Successful
+
+<<< Now, if I want to change the target sdk from 25 (nougat) to 26 (oreo) edit the app build.gradle file
+
+apply plugin: 'com.android.application'
+
+android {
+compileSdkVersion 25
+buildToolsVersion '26.0.2'
+
+defaultConfig {
+applicationId "com.example.android.recyclerview"
+minSdkVersion 10
+targetSdkVersion 25
+versionCode 1
+versionName "1.0"
+}
+buildTypes {
+release {
+minifyEnabled false
+}
+}
+}
+
+dependencies {
+compile fileTree(dir: 'libs', include: ['*.jar'])
+compile 'com.android.support:appcompat-v7:25.1.0'
+compile 'com.android.support:recyclerview-v7:25.1.0'
+}
+
+<<< Change compileSdkVersion from 25 to 26
+
+3 errors:
+
+
+	1. compileSdkVersion (25) should not be lower than targetSdkVersion (26)
+	2. the support library 'com.android.support:appcompat-v7:25.1.0' should not use a lower version than the targetSdkVersion
+	3. the support library 'com.android.support:recyclerview-v7:25.1.0' should not use a lower version than the targetSdkVersion
+
+There are some combinations of libraries, or tools and libraries, that are incompatible, or can lead to bugs. One such incompatibility is compiling with a version of the Android support libraries that is not the latest version (or in particular, a version lower than your targetSdkVersion.) When using a compileSdkVersion android-O revision 2 or higher, the support library version should be 26.0.0-beta1 or higher (was 25.1.0)
+
+<<< Google "android support library version"
+
+Recent Support Library Revisions:   https://developer.android.com/topic/libraries/support-library/revisions.html
+
+<<< Change support libraries to latest revision (currently 26.1.0) and Select "Sync Now"
+
+Error:Execution failed for task ':app:processDebugManifest'.
+> Manifest merger failed : uses-sdk:minSdkVersion 10 cannot be smaller than version 14 declared in library [com.android.support:appcompat-v7:26.1.0] C:\Users\Steve\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\272d6ac023c0dda6a2a5014735dae6fd\AndroidManifest.xml as the library might be using APIs not available in 10
+      Suggestion: use a compatible library with a minSdk of at most 10,
+          or increase this project's minSdk version to at least 14,
+          or use tools:overrideLibrary="android.support.v7.appcompat" to force usage (may lead to runtime failures)
+
+<<< As of support library 26.0.0 the minimum SDK version has been increased to 14. 
+<<< As a result, many APIs that existed only for compatibility with pre-14 API levels have been deprecated.
+<<< Clients of these APIs should migrate to their framework equivalents as noted in the reference page for each deprecated API.
+<<< Change minSdkVersion from 10 to 14 and Select "Sync Now"
+
+Build Successful
+
+<<< Now we're talking!!
