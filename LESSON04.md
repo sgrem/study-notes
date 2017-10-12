@@ -31,6 +31,21 @@
 	[Plan for updating an Android project to target new version](AndroidProjectUpgrade.txt)
 
 
+* Opened T03.03-Exercise-RecyclerViewAdapter
+
+	extends RecyclerView.Adapter<GreenAdapter.NumberViewHolder>
+	
+	Override onCreateViewHolder
+	* get context from viewgroup parameter
+	* get LayoutInflater from context
+	* inflate the recyclerview item layout to create a view
+	* create a new NumberViewHolder and pass in the view
+	
+	Override onBindViewHolder and call the numberviewholder bind method passing in the position integer
+	
+	
+
+
 ### Reflections Q + A
 
 **What are the pros and cons of RecyclerView vs ListView?**
